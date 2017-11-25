@@ -54,7 +54,7 @@ print(detailedLocation)
  
  What does the \n character represent?
  */
-// It looks like the \n character makes the text...
+// It looks like the \n character makes the text not be used as a set of variables, but actual words.
 // (finish this sentence)
 
 /*:
