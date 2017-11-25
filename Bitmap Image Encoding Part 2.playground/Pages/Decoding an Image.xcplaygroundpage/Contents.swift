@@ -20,16 +20,19 @@ import PlaygroundSupport
 
 // Copy your encoded image string here...
 let encodedBitmap = """
-1,3,1
-0,1,3,1
-1,3,1
-2,1,2
-0,5
-1,3,1
+6a3,,1
+5,1,3,1
+6,3,1
+7,1,2
+5,5
+6,3,1
 """
 
 // Make a canvas
 let canvas = Canvas(width: 402, height: 402)
+
+
+
 
 // Make a grid
 // NOTE: The code that builds the grid was tucked away in something called a *function* to keep things tidy. We'll learn about functions later.
@@ -53,8 +56,14 @@ var drawThisManyPixels = 0
 // Iterate over each character in the encoded bitmap string
 for character in encodedBitmap {
     
+    //set colour a as green
+    if character == "a" {
+        canvas.fillColor = Color.green
+    }
+
+    
     // Set colour at start of a line
-    if character == "0" {
+   else if character == "0" {
         
         canvas.fillColor = Color.black
         currentColor = "black"
