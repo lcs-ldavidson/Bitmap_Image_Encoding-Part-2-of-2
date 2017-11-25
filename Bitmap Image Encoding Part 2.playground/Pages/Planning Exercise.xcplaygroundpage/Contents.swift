@@ -22,10 +22,10 @@
  */
 
 // Here's my list of points describing how I decoded the image...
-// 1.
-// 2.
-// 3.
-// 4.
+// 1. I drew seven white squares, then 1 black square, then 1 white square, then 1 black square, then 6 white squares.
+// 2. I
+// 3.Understand
+// 4.This!
 // 5.
 // etc. (add more points as needed)
 
