@@ -54,8 +54,8 @@ for character in encodedBitmap {
  
  Write your ideas in the code comment below.
  */
-// I notice that...
-// I know this because...
+// I notice that the black squares are drawn where I expected them to be drawn. The squares alternate colour each time there is a comma.
+// I know this because the grid matched the string of code.
 /*:
  Now, **remember to commit and push your work**.
  */
