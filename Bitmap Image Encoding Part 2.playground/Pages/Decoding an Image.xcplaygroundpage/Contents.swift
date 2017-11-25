@@ -20,12 +20,17 @@ import PlaygroundSupport
 
 // Copy your encoded image string here...
 let encodedBitmap = """
-6a3,,1
-5,1,3,1
-6,3,1
-7,1,2
-5,5
-6,3,1
+
+
+
+
+
+6b3,,1
+5,b1,c3,b1
+6,b3,1
+7,a1,2
+5,a5
+6,a3,1
 """
 
 // Make a canvas
@@ -60,7 +65,16 @@ for character in encodedBitmap {
     if character == "a" {
         canvas.fillColor = Color.green
     }
-
+        
+        //set colour b as orange
+    else if character == "b" {
+    canvas.fillColor = Color.orange
+    }
+        
+        //set colour c as yellow
+    else if character == "c" {
+        canvas.fillColor = Color.yellow
+    }
     
     // Set colour at start of a line
    else if character == "0" {
