@@ -21,11 +21,11 @@ import PlaygroundSupport
 // Copy your encoded image string here...
 let encodedBitmap = """
 1,3,1
-4,1
-1,4
 0,1,3,1
-0,1,3,1
-1,4
+1,3,1
+2,1,2
+0,5
+1,3,1
 """
 
 // Make a canvas
