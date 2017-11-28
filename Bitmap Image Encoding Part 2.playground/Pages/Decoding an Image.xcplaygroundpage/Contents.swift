@@ -22,15 +22,24 @@ import PlaygroundSupport
 let encodedBitmap = """
 
 
+w2 w4 b8 w4
+w2 w2 b2 r8 b2 w2
+w2 w1 b1 r3 o6 r3 b1 w1
+w2 b1 r2 o2 y1 b1 y2 b1 y1 o2 r2 b1
+w2 b1 r2 o1 y1 w1 b1 w2 b1 w1 y1 o1 r2 b1
+w2 b1 r2 o2 y1 b1 y2 b1 y1 o2 r2 b1
+w2 w1 b1 r3 o6 r3 b1 w1
+w2 w2 b2 r8 b2 w2
+w2 w3 b9 b1 w3
+w2 w1 b2 w3 b1 g2 b1 w3 b2 w1
+w2 b1 g2 b2 w1 b1 g2 b1 w1 b2 g2 b1
+w2 b1 g4 b2 g2 b2 g4 b1
+w2 b1 g5 b1 g2 b1 g5 b1
+w2 w1 b1 g4 b1 g2 b1 g4 b1 w1
+w2 w2 b2 g8 b2 w2
+w2 w4 b8 w4
 
 
-
-6b3,,1
-5,b1,c3,b1
-6,b3,1
-7,a1,2
-5,a5
-6,a3,1
 """
 
 // Make a canvas
@@ -58,23 +67,95 @@ var y = canvas.height - cellSize - 2
 // Store the current number of pixels to draw
 var drawThisManyPixels = 0
 
+
+
+
+
+
+
+
+
+//COLOURS
+
 // Iterate over each character in the encoded bitmap string
 for character in encodedBitmap {
     
-    //set colour a as green
-    if character == "a" {
+    //set colour as green
+    if character == "g" {
         canvas.fillColor = Color.green
     }
         
-        //set colour b as orange
-    else if character == "b" {
+        //set colour as orange
+    else if character == "o" {
     canvas.fillColor = Color.orange
     }
         
-        //set colour c as yellow
-    else if character == "c" {
+        //set colour as white
+    else if character == "w" {
+        canvas.fillColor = Color.white
+    }
+        
+        //set colour as yellow
+    else if character == "y" {
         canvas.fillColor = Color.yellow
     }
+        
+        //set colour  as black
+    else if character == "b" {
+        canvas.fillColor = Color.black
+    }
+        
+        //set colour  as red
+    else if character == "r" {
+        canvas.fillColor = Color.red
+    }
+        
+        //set colour  as red
+    else if character == " " {
+        canvas.fillColor = Color.white
+    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//CRAP THAT IS NO LONGER REQUIRED
+        
+        
     
     // Set colour at start of a line
    else if character == "0" {
