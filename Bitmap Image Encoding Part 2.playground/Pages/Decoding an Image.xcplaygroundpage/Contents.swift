@@ -20,26 +20,24 @@ import PlaygroundSupport
 
 // Copy your encoded image string here...
 let encodedBitmap = """
-
-
-w2 w4 b8 w4
-w2 w2 b2 r8 b2 w2
-w2 w1 b1 r3 o6 r3 b1 w1
-w2 b1 r2 o2 y1 b1 y2 b1 y1 o2 r2 b1
-w2 b1 r2 o1 y1 w1 b1 w2 b1 w1 y1 o1 r2 b1
-w2 b1 r2 o2 y1 b1 y2 b1 y1 o2 r2 b1
-w2 w1 b1 r3 o6 r3 b1 w1
-w2 w2 b2 r8 b2 w2
-w2 w3 b9 b1 w3
-w2 w1 b2 w3 b1 g2 b1 w3 b2 w1
-w2 b1 g2 b2 w1 b1 g2 b1 w1 b2 g2 b1
-w2 b1 g4 b2 g2 b2 g4 b1
-w2 b1 g5 b1 g2 b1 g5 b1
-w2 w1 b1 g4 b1 g2 b1 g4 b1 w1
-w2 w2 b2 g8 b2 w2
-w2 w4 b8 w4
-
-
+w6 b6 w6
+w3 b3 g6 b3 w3
+w1 b2 g3 b6 G3 b2 w1
+b1 g2 b3 S6 b3 G2 b1
+b1 g1 b1 s2 e3 s2 e2 y1 S2 b1 G1 b1
+b1 g1 b1 s3 b1 S1 s1 S1 s1 b1 S3 b1 G1 b1
+b1 g2 b1 s3 S1 s1 S1 s2 S2 b1 G2 b1
+w1 b1 g1 b1 s2 b6 S2 b1 G1 b1 w1
+w2 b2 s1 b1 e6 b1 S1 b2 w2
+w4 b1 e6 y2 b1 w4
+w3 b1 g1 b1 e3 y3 b1 G1 b1 w3
+w2 b1 g3 B2 e1 y1 b2 G3 b1 w2
+w2 b1 g5 b2 G5 b1 w2
+w1 b1 g6 G8 b1 w1
+w1 b1 g9 g1 G4 b1 w1
+w1 b1 g9 g2 G3 b1 w1
+b1 g9 g3 G4 b1
+b9 b9
 """
 
 // Make a canvas
@@ -110,16 +108,35 @@ for character in encodedBitmap {
         canvas.fillColor = Color.red
     }
         
-        //set colour  as red
+        //set space does nothing
     else if character == " " {
         canvas.fillColor = Color.white
     }
         
+        //set colour as dark green
+    else if character == "G" {
+        canvas.fillColor = Color.init(hue: 120, saturation: 70, brightness: 60, alpha: 100)
+    }
         
+        //set colour as grey
+    else if character == "e" {
+        canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 60, alpha: 100)
+    }
         
+        //set colour as skin colour
+    else if character == "s" {
+        canvas.fillColor = Color.init(hue: 50, saturation: 60, brightness: 60, alpha: 100)
+    }
         
+        //set colour as dark skin
+    else if character == "S" {
+        canvas.fillColor = Color.init(hue: 50, saturation: 60, brightness: 450, alpha: 100)
+    }
         
-        
+        //set colour as dark grey
+    else if character == "y" {
+        canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 45, alpha: 100)
+    }
         
         
         
@@ -187,9 +204,6 @@ for character in encodedBitmap {
         y = y - cellSize
         x = 0
         
-        // Default colour after new line is white
-        canvas.fillColor = Color.white
-        currentColor = "white"
         
     } else {
         
